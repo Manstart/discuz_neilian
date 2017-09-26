@@ -1,0 +1,156 @@
+<!--{template common/header}-->	
+		<link rel="stylesheet" href="static/css/team.css" />
+   <style type="text/css">
+		.wp{width: auto;}
+   </style>
+	    <div class="banner_container">
+	    	<ul id="slides">
+	    		<li style="background:url(static/image/tools/1.jpg) no-repeat 50% 0px; z-index: 900px;"></li>
+	    		<li style="background:url(static/image/tools/201602221510015175.jpg) no-repeat 50% 0px; z-index: 900px;"></li>
+	    	</ul>
+	    </div>
+	    
+	    <div class="tools">
+	    	<div class="tools_container">
+	    		<div class="tools_left">
+	    			<span class="search_box">
+	    				<input type="text" autocomplete="off" class="search" name="search" placeholder="请输入你想搜索的工具">
+	    				<i class="fa fa-search search_icon"></i>
+	    			</span>
+	    			<a class="icon_one comment" href="javascript:;" data-id="1" target="_blank">
+	    				<span class="php"></span>
+	    				<em>PHP工具</em>
+	    				<i class="fa fa-caret-up caret"></i>
+	    			</a>
+	    			<a class="icon_two comment" href="javascript:;" data-id="2" target="_blank">
+	    				<span class="jq"></span>
+	    				<em>$插件</em>
+	    				<i class="fa fa-caret-up caret"></i>
+	    			</a>
+	    			<a class="icon_three comment" href="javascript:;" data-id="3" target="_blank">
+	    				<span class="H5"></span>
+	    				<em>HTML5工具</em>
+	    				<i class="fa fa-caret-up caret"></i>
+	    			</a>
+	    			
+	    			<a class="icon_four comment" href="javascript:;" data-id="4" target="_blank">
+	    				<span class="linux"></span>
+	    				<em>Linux组件</em>
+	    				<i class="fa fa-caret-up caret"></i>
+	    			</a>
+	    			<a class="icon_five comment" href="javascript:;" data-id="5" target="_blank">
+	    				<span class="js"></span>
+	    				<em>JavaScript工具</em>
+	    				<i class="fa fa-caret-up caret"></i>
+	    			</a>
+	    			<a class="icon_six comment" href="javascript:;" data-id="6" target="_blank">
+	    				<span class="development"></span>
+	    				<em>开发工具</em>
+	    				<i class="fa fa-caret-up caret"></i>
+	    			</a>
+	    			<a class="icon_seven comment" href="javascript:;" data-id="7" target="_blank">
+	    				<span class="server"></span>
+	    				<em>服务器工具</em>
+	    				<i class="fa fa-caret-up caret"></i>
+	    			</a>
+	    			<a class="icon_eight comment" href="javascript:;" data-id="8" target="_blank">
+	    				<span class="other"></span>
+	    				<em>其他软件</em>
+	    				<i class="fa fa-caret-up caret"></i>
+	    			</a>
+	    			<a class="upload" href="javascript:;" target="_blank">我要上传</a>
+	    		</div>
+	    		
+                <div class="tools_right">
+					<b>研发管理组成员</b>
+					<ul class="team_people">
+						<li style="background:url(static/image/team/one.jpg) no-repeat;width:200px;height:200px;"></li>
+						<li style="background:url(static/image/team/two.jpg) no-repeat;width:200px;height:200px;"></li>
+						<li style="background:url(static/image/team/three.jpg) no-repeat;width:200px;height:200px;"></li>
+						<li style="background:url(static/image/team/four.jpg) no-repeat;width:200px;height:200px;"></li>
+						<li style="background:url(static/image/team/five.jpg) no-repeat;width:200px;height:200px;"></li>
+						<li style="background:url(static/image/team/six.jpg) no-repeat;width:200px;height:200px;"></li>
+						<li style="background:url(static/image/team/seven.jpg) no-repeat;width:200px;height:200px;"></li>
+					</ul>
+
+	    			
+                </div>
+	    	</div>
+	    </div>
+
+	<script>
+		$(function(){
+			leftNavArr = ['one_icon','two_icon','three_icon','four_icon','five_icon','six_icon','seven_icon','eight_icon']
+			var leftaA = $(".comment");
+         	var olderRoot = $(".comment").parent().find('.root');
+         	var olderIndex = olderRoot.index() || 0;
+         	leftaA.on('click',function(event){
+             var index = $(this).index()-1;
+             //数据分类ID
+             var dataId = $(this).attr('data-id');
+             olderRoot.removeClass(leftNavArr[olderIndex]).removeClass('root');
+             $(this).addClass('root').addClass(leftNavArr[index]);
+             $(this).find("i").css("display","block").parent(".comment").siblings().find("i").hide();
+             olderIndex = index;
+             olderRoot = $(this);
+//           var color = $(this).css("background-color");
+//
+//           $.fn.getHexBackgroundColor=function(property)
+//				{ 
+//					var rgb=property;
+//				    rgb=rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/); 
+//				    function hex(x) 
+//				    { 
+//				      return ("0"+parseInt(x).toString(16)).slice(-2); 
+//				    } 
+//				    rgb="#"+hex(rgb[1])+hex(rgb[2])+hex(rgb[3]); 
+//
+//				  return rgb; 
+//				}  
+//           var kk=$.fn.getHexBackgroundColor(color);
+//         	$(".tools_img").css("border-color",kk);
+//           ajaxData(dataId);
+             event.stopPropagation();
+             event.preventDefault();
+             return false;
+             
+			});
+			var k=0;
+			$(".tools_classify").each(function(){
+				k++;
+				if(k<17){
+					$(this).children(".tools_img").addClass("qq"+k);
+					
+				}else{
+					$(this).children(".tools_img").addClass("qq1");
+					k=1;
+				}
+			});
+			
+			$(".search").focus(function(){
+				$(this).css("box-shadow","rgba(102,175,233,0.5) 0px 0px 6px");
+			})
+			$(".search").blur(function(){
+				$(this).css("box-shadow","1px 1px 8px rgba(210,206,206,0.35) inset,1px 1px 4px rgba(255,255,255,0.4)");
+			})
+			
+			$(".tools_author .user").click(function(){
+				$(this).parent(".tools_author").hide(300).siblings(".author_name").show(300);
+			});
+			$(".author_name").click(function(){
+				$(this).hide(300).siblings(".tools_author").show(300);
+			});
+			$(document).scroll(function(){
+//				var scrTop = (document.body.scrollTop || document.documentElement.scrollTop);
+				var top = $(document).scrollTop() ; 
+				if(top>486){
+					if(top<1020){
+						$(".tools_left").css("top", (top-490) + "px");
+					}
+				}else{
+					$(".tools_left").css("top", "0px");
+				}
+			})
+        });
+	</script>
+<!--{template common/footer}-->
