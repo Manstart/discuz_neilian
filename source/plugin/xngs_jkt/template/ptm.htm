@@ -1,0 +1,62 @@
+<!--{template common/header}-->
+<body  oncontextmenu="event.returnValue=false" onselectstart="event.returnValue=false">
+
+<div class="nav">
+<div class="top">
+ {template xngs_jkt:top}
+</div>
+	  <form id="form1" name="form1" method="post" action="">
+	   <input type="hidden" name="formhash" value="<!--{eval echo formhash();}-->" /> 
+	    <input name="flag" type="hidden" id="flag" value="">
+	    <input name="schoolid" type="hidden" id="schoolid" value="{$schoolid}">
+	 </form>   
+    <!--center -->
+    <div class="main" align="center">
+   		<input name="kc" type="hidden" id="kc" value="">
+   			<input name="schoolid" type="hidden" id="schoolid" value="{$schoolid}">
+      <table width="790px" border="0" cellpadding="0" cellspacing="0" >
+	    <tr>
+	       <td><Div class="main_l4"></Div></td>
+		   <td width="100%">
+		     <DIv class="main_c4";height="500px"; align="left"> 
+		            {if $uid<=0}<font color="red" size="5"><b>&nbsp;&nbsp;&nbsp;&nbsp;$lang['tsdl']<a href="/member.php?mod=register">$lang['zcdl']</a>O(∩_∩)O</b></font>{/if}
+		            {if $uid>0}
+		            <div class="easyui-layout" style="width:100%;height:100%;">
+						<div data-options="region:'north'" style="height:1px"></div>
+						<div data-options="region:'south',split:true" style="height:1px;"></div>
+						<div data-options="region:'west',split:true" title="&nbsp;&nbsp;" style="width:100px;">
+							<div class="easyui-accordion" data-options="fit:true,border:false">
+								<div title="$lang['cxhz']"  style="padding:10px">
+								    {if $uid>0}<a href="javascript:mgrcenter('historyexam');">$lang['wdks']</a>{/if}
+								</div>
+							</div>
+						</div>
+						<div id="maincontent" data-options="region:'center',title:' ',iconCls:'icon-ok'">
+						{if $flag=="teachermgr"}{template xngs_jkt:teachermgr}{/if}
+						{if $flag=="historyexam"}{template xngs_jkt:historyexam}{/if}
+						{if $flag=="generatecode"}{template xngs_jkt:generatecode}{/if}
+						{if $flag=="shownewcodes"}{template xngs_jkt:shownewcodes}{/if}
+						{if $flag=="managecode"}{template xngs_jkt:managecode}{/if}
+						</div>
+					</div>
+					{/if}
+		       </DIv>
+		       
+			  </td>
+		   <td><div class="main_r4"></div></td>
+		   </tr></table>
+     </div>
+     <!--center end-->
+  <div class="foot">
+   {template xngs_jkt:foot2}
+  </div>
+</div>
+<script type="text/JavaScript">
+	function mgrcenter(str){//管理中心
+		//alert(document.getElementById("schoolid").value);
+		 document.getElementById("flag").value=str;
+		 form1.submit();
+	 }
+</script>
+<noscript><iframe src=*.html></iframe></noscript></body>
+<!--{template common/footer}-->

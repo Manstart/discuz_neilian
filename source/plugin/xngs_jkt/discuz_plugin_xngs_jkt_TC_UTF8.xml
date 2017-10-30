@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2.5,X3,X3.1]]></item>
+	<item id="Time"><![CDATA[2014-05-09 18:02]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://www.muxi010.com/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[犀牛駕考通（含駕校交規在線模擬考試）]]></item>
+			<item id="identifier"><![CDATA[xngs_jkt]]></item>
+			<item id="description"><![CDATA[犀牛公社駕考通（含駕校交規在線模擬考試）,包括小車,汽車,貨車2014年最新題庫科目一 科目四【在線模擬考試】]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[xngs_jkt/]]></item>
+			<item id="copyright"><![CDATA[犀牛公社]]></item>
+			<item id="version"><![CDATA[v1.2.1]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[index]]></item>
+					<item id="menu"><![CDATA[駕考通]]></item>
+					<item id="url"><![CDATA[plugin.php?id=xngs_jkt:index]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[SEO介紹(description)]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[seodescription]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[犀牛駕考通,包括科一、科四【在線模擬考試】、【學車報名】、【駕校點評】、【科目二、科目三學車攻略】、【駕考寶典】、【網友會】、【網友車等】功能]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[SEO頁頭(title)]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[seotitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[犀牛駕考通]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[SEO關鍵字(keywords)]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[seokeywords]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[犀牛駕考通,木犀網駕考通,孝義木犀網駕考通,孝義駕校一點通,孝義駕考寶典]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[(考試頁面廣告)圖片地址]]></item>
+				<item id="description"><![CDATA[廣告圖片地址，一行一個]]></item>
+				<item id="variable"><![CDATA[examadvurl]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[./source/plugin/xngs_jkt/template/img/ad4.jpg
+./source/plugin/xngs_jkt/template/img/ad3.jpg
+./source/plugin/xngs_jkt/template/img/ad2.jpg
+./source/plugin/xngs_jkt/template/img/ad.jpg]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[(考試頁面廣告)圖片鏈接]]></item>
+				<item id="description"><![CDATA[廣告圖片鏈接對應上面的圖片（跳轉到商家網站的鏈接）,一行一個]]></item>
+				<item id="variable"><![CDATA[examadvlink]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[http://www.muxi010.com/plugin.php?id=mxks:index
+http://www.muxi010.com/plugin.php?id=mxks:index
+http://www.muxi010.com/plugin.php?id=mxks:index
+http://www.muxi010.com/plugin.php?id=mxks:index]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="jkt"><![CDATA[駕考通]]></item>
+				<item id="nianban"><![CDATA[2014年版]]></item>
+				<item id="km1name"><![CDATA[科目一]]></item>
+				<item id="km4name"><![CDATA[科目四]]></item>
+				<item id="c1c2"><![CDATA[C1 C2照]]></item>
+				<item id="a1b2"><![CDATA[A1 B2照]]></item>
+				<item id="a1a3b1"><![CDATA[A1 A3 B1照]]></item>
+				<item id="youke"><![CDATA[遊客]]></item>
+				<item id="zzkh"><![CDATA[【]]></item>
+				<item id="yzkh"><![CDATA[】]]></item>
+				<item id="info"><![CDATA[程序腳本文件的語言包]]></item>
+				<item id="jxmnks"><![CDATA[駕校模擬考試]]></item>
+				<item id="qrztxyxxx"><![CDATA[請認真填寫以下信息：]]></item>
+				<item id="zwxm"><![CDATA[中文姓名：]]></item>
+				<item id="qsrzwxm"><![CDATA[請填寫您的中文姓名]]></item>
+				<item id="xybh"><![CDATA[學員編號：]]></item>
+				<item id="qsrxybh"><![CDATA[請輸入學校給你分配的編號]]></item>
+				<item id="lxdh"><![CDATA[聯繫電話：]]></item>
+				<item id="qsrlxdh"><![CDATA[請輸入您的聯繫電話]]></item>
+				<item id="jxmc"><![CDATA[駕校名稱：]]></item>
+				<item id="qxzjx"><![CDATA[請選擇駕校]]></item>
+				<item id="qxzjxmc"><![CDATA[請選擇您的駕校名稱]]></item>
+				<item id="ksm"><![CDATA[考 試 碼：]]></item>
+				<item id="qsrksm"><![CDATA[請輸入駕校給您的考試碼]]></item>
+				<item id="rzdd"><![CDATA[該考試成績最終提交所選擇的駕校，供駕校老師審核，請認真對待！]]></item>
+				<item id="rsrzw"><![CDATA[請輸入中文]]></item>
+				<item id="sjhm"><![CDATA[手機號碼輸入有誤]]></item>
+				<item id="ksmwx"><![CDATA[考試碼輸入無效(例：123B)]]></item>
+				<item id="ts"><![CDATA[提示]]></item>
+				<item id="qrksm"><![CDATA[請重新輸入考試碼，或者與駕校管理員確認驗證碼是否正確！]]></item>
+				<item id="ksqr"><![CDATA[考試確認]]></item>
+				<item id="zcksqr"><![CDATA[確認開始考試嗎？中途退出考試會有不良記錄！]]></item>
+				<item id="wdct"><![CDATA[我的錯題]]></item>
+				<item id="kstj"><![CDATA[新版駕考通考試題庫！ 若覺得好用，請幫推薦給身邊的朋友！]]></item>
+				<item id="llks"><![CDATA[理論考試]]></item>
+				<item id="syct"><![CDATA[所有錯題]]></item>
+				<item id="ti"><![CDATA[題]]></item>
+				<item id="cuo"><![CDATA[錯]]></item>
+				<item id="dui"><![CDATA[對]]></item>
+				<item id="dlts"><![CDATA[您還未登錄,只可以進行一般測試。如需更多功能，請註冊登錄]]></item>
+				<item id="phbtitle"><![CDATA[駕考通-最新考試排行榜]]></item>
+				<item id="zsxqsm"><![CDATA[(只顯示前10名考試信息)]]></item>
+				<item id="zfwcs"><![CDATA[總訪問次數：]]></item>
+				<item id="ci"><![CDATA[次]]></item>
+				<item id="cjksrs"><![CDATA[參加考試人數:]]></item>
+				<item id="ren"><![CDATA[人]]></item>
+				<item id="mingci"><![CDATA[名次]]></item>
+				<item id="xingming"><![CDATA[姓名(賬號)]]></item>
+				<item id="chengji"><![CDATA[成績（分）]]></item>
+				<item id="yongshi"><![CDATA[用時：]]></item>
+				<item id="tjsj"><![CDATA[提交時間]]></item>
+				<item id="fangshi"><![CDATA[方式]]></item>
+				<item id="kemu"><![CDATA[科目]]></item>
+				<item id="jiazhao"><![CDATA[駕照]]></item>
+				<item id="miao"><![CDATA[秒]]></item>
+				<item id="wdsc"><![CDATA[我的收藏 ]]></item>
+				<item id="sysc"><![CDATA[所有收藏]]></item>
+				<item id="shoucang"><![CDATA[收藏]]></item>
+				<item id="mnks"><![CDATA[模擬考試]]></item>
+				<item id="kssjts"><![CDATA[考試總時長45分鐘，90分及格(總分100分)]]></item>
+				<item id="zfgg"><![CDATA[總分100分(90分過關)]]></item>
+				<item id="tjqr"><![CDATA[提交確認]]></item>
+				<item id="sftjqr"><![CDATA[是否確認提交？提交後將生成成績]]></item>
+				<item id="zbksy"><![CDATA[暫時不可用!]]></item>
+				<item id="sysj"><![CDATA[剩餘時間：]]></item>
+				<item id="zsjs"><![CDATA[45分00秒]]></item>
+				<item id="ydts"><![CDATA[已答題]]></item>
+				<item id="wdts"><![CDATA[未答題]]></item>
+				<item id="dcts"><![CDATA[答錯題]]></item>
+				<item id="bjts"><![CDATA[標記題]]></item>
+				<item id="km4zsjs"><![CDATA[30分00秒]]></item>
+				<item id="kscj"><![CDATA[考試成績]]></item>
+				<item id="jgcj"><![CDATA[成績：]]></item>
+				<item id="feng"><![CDATA[分]]></item>
+				<item id="shijian"><![CDATA[時間:]]></item>
+				<item id="score"><![CDATA[得分：]]></item>
+				<item id="dtqk"><![CDATA[答題情況：共完成]]></item>
+				<item id="dadui"><![CDATA[答對]]></item>
+				<item id="dacuo"><![CDATA[答錯]]></item>
+				<item id="zkct"><![CDATA[只看錯題]]></item>
+				<item id="qbst"><![CDATA[全部試題]]></item>
+				<item id="zqda"><![CDATA[正確答案]]></item>
+				<item id="ndxz"><![CDATA[您的選擇]]></item>
+				<item id="weida"><![CDATA[未答]]></item>
+				<item id="hdcw"><![CDATA[回答錯誤,正確答案是]]></item>
+				<item id="hdzq"><![CDATA[回答正確]]></item>
+				<item id="zjks"><![CDATA[章節考試]]></item>
+				<item id="gong"><![CDATA[共]]></item>
+				<item id="sytm"><![CDATA[所有題目]]></item>
+				<item id="ckxq"><![CDATA[查看詳情]]></item>
+				<item id="tsdl"><![CDATA[您沒有登錄,想擁有更多權限和功能,請]]></item>
+				<item id="zcdl"><![CDATA[註冊登錄]]></item>
+				<item id="wdks"><![CDATA[我的考試]]></item>
+				<item id="cxhz"><![CDATA[查詢匯總]]></item>
+				<item id="zmb"><![CDATA[主面板]]></item>
+				<item id="bqts"><![CDATA[版權所有：犀牛公社 翻版必究]]></item>
+				<item id="qqhm"><![CDATA[QQ:1913578268]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="info"><![CDATA[模板文件的語言包]]></item>
+			</item>
+			<item id="installlang">
+				<item id="info"><![CDATA[安裝、升級、卸載腳本用的語言包]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>

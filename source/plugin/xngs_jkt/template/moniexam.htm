@@ -1,0 +1,67 @@
+<!--{template common/header}-->
+<div class="top">
+ {template xngs_jkt:top}
+</div>
+
+<body  oncontextmenu="event.returnValue=false" onselectstart="event.returnValue=false">
+<div class="nav">
+
+    <!--center -->
+    <div class="main">
+     <form id="form2" name="form2" method="post" action="">
+     	<input type="hidden" name="formhash" value="<!--{eval echo formhash();}-->" /> 
+   		<input name="personorschool" type="hidden" id="personorschool" value="">
+   		<input type="hidden" id="onelevel" name="onelevel" value="{$onelevel}"/>
+   		<input name="twolevel" type="hidden" id="twolevel" value="{$twolevel}">
+   		<input name="tb" type="hidden" id="tb" value="{$tb}">
+   		<input type="hidden" id="onelevelname" name="onelevelname" value="{$onelevelname}"/>
+		<input type="hidden" id="jzmc" name="jzmc" value="{$jzmc}"/>
+		<input type="hidden" id="username" name="username" value="{$username}"/>
+		<input name="submitnum" type="hidden" id="submitnum" value="{$submitnum}">
+    	<table border="0" cellpadding="0" cellspacing="0">
+	    <tr>
+	       <td><Div class="main_l"></Div></td>
+	      <td width="100%"><div class="main_c2">
+            <div class="car_title{$tb}"><!-- 小车 car_title01  货车 car_title02  客车 car_title03 -->
+              <div class="car_word">
+                <div class="car_word01 f20b">$lang['mnks']  {$jzmc}</div>
+                <div class="car_word02 y20b">$lang['nianban'] {$onelevelname}</div>
+				 <div class="car_word03 b16">$lang['kssjts']</div>
+				  <div class="car_word04">
+				   <div class="bt_ceshi"><a href="javascript:selpersonorschool(1);"></a></div>
+				   
+				  
+				    </div>
+              </div>
+            </div>
+          </div></td>
+		   <td><div class="main_r"></div></td>
+        </tr>
+      </table>
+     </form>
+  </div>
+     <!--center end-->
+     <script type="text/JavaScript">
+     
+     
+		 	  //考试方式
+		 	  function selpersonorschool(str){
+		 		 document.getElementById("personorschool").value=str; 
+		 		 if(str==1){
+		 				//jq.messager.confirm("$lang['ksqr']","$lang['zcksqr']", function(r){
+		 					//if (r){
+		 						form2.submit();
+		 					//}
+		 				//});
+		 		 }else{
+		 		       form2.submit();
+		 		 }
+		 		}
+   	</script>
+  <div class="foot">
+   {template xngs_jkt:foot2}
+  </div>
+</div>
+<noscript><iframe src=*.html></iframe></noscript></body>
+
+<!--{template common/footer}-->

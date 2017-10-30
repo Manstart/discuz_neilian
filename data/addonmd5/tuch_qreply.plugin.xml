@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[tuch_qreply.plugin]]></item>
+	<item id="RevisionID"><![CDATA[74849]]></item>
+	<item id="SN"><![CDATA[2017092715Es777lU1ES]]></item>
+	<item id="RevisionDateline"><![CDATA[1499432621]]></item>
+	<item id="Data">
+		<item id="/discuz_plugin_tuch_qreply_SC_GBK.xml"><![CDATA[1705512efa01da962327cd40199e9cf2]]></item>
+		<item id="/discuz_plugin_tuch_qreply_SC_UTF8.xml"><![CDATA[b6e9e188cbe3646e6c1f4633f81ce6b1]]></item>
+		<item id="/discuz_plugin_tuch_qreply_TC_BIG5.xml"><![CDATA[c6d32f599b8ac1b686b804a7cb8064e7]]></item>
+		<item id="/discuz_plugin_tuch_qreply_TC_UTF8.xml"><![CDATA[3748aced93be065a95455bed539aea2e]]></item>
+		<item id="/main.class.php"><![CDATA[9eb6dca8b576ca49ded34e05d25e0bcd]]></item>
+	</item>
+</root>

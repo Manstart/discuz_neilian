@@ -1,0 +1,18 @@
+<!--{template common/header}-->
+<style>
+.list_style{padding-left: 16px;}
+</style>
+<div id="ct" class="wp cl">
+        <div class="bm">
+        <!--{if $list}--> 
+            <!--{loop $list $funds}-->
+               <a class="list_style"><!--{$funds[app_name]}--></a>于<!--{$funds[app_date]}-->申请<!--{$funds[app_money]}-->元资金，理由是<!--{$funds[app_reason]}--><hr>
+        
+            <!--{/loop}-->
+        $multi
+        <!--{else}-->
+            <p class="emp">暂时没有记录...</p>
+        <!--{/if}-->
+        </div>      
+</div>
+<!--{template common/footer}-->

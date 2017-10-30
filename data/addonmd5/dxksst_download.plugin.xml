@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[dxksst_download.plugin]]></item>
+	<item id="RevisionID"><![CDATA[12078]]></item>
+	<item id="SN"><![CDATA[2017092914IwV8ie37vl]]></item>
+	<item id="RevisionDateline"><![CDATA[1395820801]]></item>
+	<item id="Data">
+		<item id="/discuz_plugin_dxksst_download_SC_GBK.xml"><![CDATA[6e660b7e855294a3649a8543b9301e37]]></item>
+		<item id="/discuz_plugin_dxksst_download_SC_UTF8.xml"><![CDATA[e966b04a4afcbe6531d5c3b7b5887151]]></item>
+		<item id="/discuz_plugin_dxksst_download_TC_BIG5.xml"><![CDATA[32eb24e7edcc9babf4f59553043117d1]]></item>
+		<item id="/discuz_plugin_dxksst_download_TC_UTF8.xml"><![CDATA[28aba63db67bf5925aa8c210ccaa6731]]></item>
+		<item id="/download.inc.php"><![CDATA[cff84d04466268a887d37e8989f20c4f]]></item>
+		<item id="/dxksst.class.php"><![CDATA[18641aae7bb7680bfd023dd3bc1fce6f]]></item>
+		<item id="/install.php"><![CDATA[81e19d61a3158cc66c3fe48634b82dfb]]></item>
+		<item id="/netdisk.php"><![CDATA[3ba51a8062de17ae7a4ade19780c785d]]></item>
+		<item id="/set.inc.php"><![CDATA[17e5a76f12dd0479bc69df4704e5e198]]></item>
+		<item id="/smart.inc.php"><![CDATA[acdd226db4c5d8b9877ee2815bb621cd]]></item>
+		<item id="/str_preg.php"><![CDATA[dc9b3c22e8b86623f6806787904682c9]]></item>
+		<item id="/uninstall.php"><![CDATA[81e19d61a3158cc66c3fe48634b82dfb]]></item>
+	</item>
+</root>

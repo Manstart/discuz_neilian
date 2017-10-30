@@ -1,7 +1,7 @@
 <?php
 //定义安全常量
 if(!defined('IN_DISCUZ')){
-    exit('zhangxingxing,Access Denied');
+    exit('Access Denied');
 }
 if(empty($_GET['mod'])){
     $_GET['mod'] = 'index';

@@ -1,18 +1,18 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('post');
 0
-|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_editor_extra.htm', 1506400770, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
-|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_editor_body.htm', 1506400770, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
-|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_editor_attribute.htm', 1506400770, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
-|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/seccheck_post.htm', 1506400770, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
-|| checktplrefresh('./template/default/forum/post.htm', './template/default/common/editor_menu.htm', 1506400770, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
-|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/editor_menu_forum.htm', 1506400770, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
-|| checktplrefresh('./template/default/forum/post.htm', './template/default/common/upload.htm', 1506400770, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
-|| checktplrefresh('./template/default/forum/post.htm', './template/default/common/editor.htm', 1506400770, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
-|| checktplrefresh('./template/default/forum/post.htm', './template/default/common/seccheck.htm', 1506400770, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
-|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1506400770, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
-|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1506400770, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
-|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1506400770, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
-|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1506400770, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
+|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_editor_extra.htm', 1508742260, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
+|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_editor_body.htm', 1508742260, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
+|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_editor_attribute.htm', 1508742260, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
+|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/seccheck_post.htm', 1508742260, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
+|| checktplrefresh('./template/default/forum/post.htm', './template/default/common/editor_menu.htm', 1508742260, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
+|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/editor_menu_forum.htm', 1508742260, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
+|| checktplrefresh('./template/default/forum/post.htm', './template/default/common/upload.htm', 1508742260, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
+|| checktplrefresh('./template/default/forum/post.htm', './template/default/common/editor.htm', 1508742260, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
+|| checktplrefresh('./template/default/forum/post.htm', './template/default/common/seccheck.htm', 1508742260, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
+|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1508742260, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
+|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1508742260, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
+|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1508742260, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
+|| checktplrefresh('./template/default/forum/post.htm', './template/default/forum/post_attachlimit.htm', 1508742260, '3', './data/template/3_3_forum_post.tpl.php', './template/PHPChina', 'forum/post')
 ;?><?php include template('common/header'); ?><script type="text/javascript">
 var allowpostattach = parseInt('<?php echo $_G['group']['allowpostattach'];?>');
 var allowpostimg = parseInt('<?php echo $allowpostimg;?>');

@@ -1,0 +1,392 @@
+<!--{template common/header}-->
+<script type="text/JavaScript">
+		//==========倒计时开始=============//
+	  	  var h,m,s,hstr,mstr,sstr,timestr;
+		 var etime=1800;
+		 function timer()
+		 {
+		    h=Math.floor(etime/3600); //时
+		    m=Math.floor(etime/60)%60;//分
+		    s=Math.floor(etime%60);//秒
+		    h<0?h=0:h-h;
+		    m<0?m=0:m=m;
+		    s<0?s=0:s=s;
+		    //h.toString().length < 2 ? hstr = "0" + h.toString() : hstr = h; //1显示01
+		    m.toString().length < 2 ? mstr = "0" + m.toString() : mstr = m; //1显示01
+		    s.toString().length < 2 ? sstr = "0" + s.toString() : sstr = s; //1显示01
+		    //timestr = hstr + ":" + mstr + "分" + sstr+"秒";
+		    timestr = mstr +"$lang['feng']" + sstr + "$lang['miao']";
+		    document.getElementById("clock").innerHTML=timestr;
+		    etime = etime - 1;
+		 }
+		 window.setInterval('timer()',1000);
+	   //==========倒计时结束=============//
+		 
+	    var ydtnum=0,wdtnum=50;//已答题，未答题
+   	    var qid;
+   	  //==kid为试题顺序号（1,2,3...），quesid为试题在试题库中的编号==//
+   	  //==k代表答题者选择的选项编号，k=0代表选项A，k=1代表选项B .以此类推==//
+   	  //typeid试题类型，0选择题，1判断题==//
+     	function gotoDiv(kid,quesid,iid,myanswer,k,typeid,trueanswer,onelevel){
+     		justGotoDiv(kid);
+     		var rid=document.getElementById("rid").value;
+     		qid=quesid;
+     		changebgcolor(kid);
+     		//==单选，判断==//
+     		if(typeid=="1"||typeid=="2"){
+     			var truek=document.getElementById(quesid+"_"+trueanswer).value;
+         		changDTNum();
+         		zuoti(rid,qid,myanswer,k,typeid,truek,trueanswer,onelevel);
+            //====多选====//
+     		}else if(typeid=="3"){
+     			var alltruechk="@";//多选题的正确答案顺序号顺序组合在一起
+     			var arraytruek=trueanswer.split("@");
+     			for(var i=1;i<arraytruek.length;i++){
+     				var truek=document.getElementById(quesid+"_"+arraytruek[i]).value;
+     				alltruechk+=truek;
+     			}
+     			myanswer="";
+     			var flag=0;
+     			var allmychk="@";
+     			var items=document.getElementsByName(quesid);//所选中的多选题选项
+     			for (var j=0;j<items.length;j++){
+     			  if(items[j].checked == true) {
+     				  //alert(j+"checked,value:"+allmychk[j].value+","+document.getElementById(quesid+"_"+allmychk[j].value).value);
+     				  //alert(document.getElementById(quesid+"_"+allmychk[j].value).value)
+     				 var chk=document.getElementById(quesid+"_"+items[j].value).value; 
+     				 allmychk+=chk;
+     				 myanswer+="@"+items[j].value;
+     				++flag;
+     			  }
+     			}
+     			if(flag==1){
+     				changDTNum();     				
+     			}
+     			zuoti(rid,qid,myanswer,allmychk,typeid,alltruechk,trueanswer,onelevel);
+     		}
+     	}
+   	  
+   	  function changDTNum(){
+   		ydtnum=ydtnum+1;
+   		wdtnum=wdtnum-1;
+   		document.getElementById("ydt").value=ydtnum;
+   		document.getElementById("wdt").value=wdtnum;
+   	  }
+     	
+     //==改变右侧进度方格背景色==//
+     function changebgcolor(kid){
+     	 document.getElementById("fk"+kid).className = "num_bt1";
+     	//document.getElementById("t_"+kid).scrollIntoView();
+     }
+     //==点进度方格，定位到试题==//
+     function justGotoDiv(kid){
+     	document.getElementById("t_"+kid).scrollIntoView();
+     }
+     	
+     	//==ajax start==//
+		var xmlHttp;
+     	function zuoti(rid,qid,myanswer,mychk,typeid,truechk,trueanswer,onelevel){ 
+			xmlHttp=GetXmlHttpObject()
+			if (xmlHttp==null){
+			 alert ("Browser does not support HTTP Request")
+			 return
+			 }
+			var url="source/plugin/xngs_jkt/exam.php";
+			url=url+"?rid="+rid;
+			url=url+"&qid="+qid;
+			url=url+"&myanswer="+myanswer;
+			url=url+"&k="+mychk;
+			url=url+"&truek="+truechk;
+			url=url+"&trueanswer="+trueanswer;
+			url=url+"&onelevel="+onelevel;
+			url=url+"&typeid="+typeid;
+			url=url+"&sid="+Math.random();
+			xmlHttp.onreadystatechange=stateChanged;
+			xmlHttp.open("GET",url,true);
+			xmlHttp.send(null);
+		}
+		
+		function stateChanged() 
+		{ 
+		
+		if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
+		 { 
+		 //document.getElementById("dis_"+qid).innerHTML=xmlHttp.responseText 
+		 } 
+		}
+		
+		function GetXmlHttpObject()
+		{
+		var xmlHttp=null;
+		try
+		 {
+		 // Firefox, Opera 8.0+, Safari
+		 xmlHttp=new XMLHttpRequest();
+		 }
+		catch (e)
+		 {
+		 //Internet Explorer
+		 try
+		  {
+		  xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+		  }
+		 catch (e)
+		  {
+		  xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		 }
+		return xmlHttp;
+		}
+		//==end ajax==//
+     	
+     	</script>
+</head>
+
+<body oncontextmenu="event.returnValue=false" onselectstart="event.returnValue=false">
+<div class="nav_exam">
+
+<!--左边开始 -->
+
+  <div class="exam_left">
+  
+  <div class="top">
+   {template xngs_jkt:top_exam}
+    </div>
+
+   <div class="main">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+	    <tr>
+          <td valign="top"><Div class="exam_main_l"></Div></td>
+	      <td width="100%" valign="top">
+		    <div class="exam_main_c">
+		  
+		  
+		    	   <div class="exam_car{$tb}"><!-- 小车 car_mn_title01  货车 car_mn_title02  客车 car_mn_title03 -->
+              <div class="exam_car_word">
+               <div class="car_mn_word01 f16b">$lang['jkt'] {$jzmc} <span class="yl14b"> $lang['nianban'] {$onelevelname}</span></div>
+                <div class="exam_car_word02 f14blue">$lang['zfgg']<br />$lang['kstj']</div>
+				
+              </div>
+            </div>
+		  
+		  
+		  
+		  
+	        </div></td>
+		   <td valign="top"><div class="exam_main_r"></div></td>
+      </tr>
+	  </table>
+	  
+	<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+	    <tr>
+	       <td valign="top" class="exam_main_l2"><div  class="exam_main_l2"></div></td>
+	      <td width="100%" valign="top">
+		    <div class="exam_main_c2 f12c">
+			{loop $questionArray $key $qArray}
+		     {if ($key%2==0)}<div class="exam_list01"> {/if}
+			 {if ($key%2==1)}<div class="exam_list02">{/if}
+			  <div class="exam_listin">
+			   <font id="t_{echo $key+1}"><b>{echo $key+1}</b>. $qArray['title'] ($qArray['id'])</font><font class="exam_list_mark"><img  src="./source/plugin/xngs_jkt/template/img/exam_mark01.jpg" /></font><br/>	   
+			     {if $qArray['content']!="null"}
+			     <div class="exam_img">
+			        {if $qArray["attachtype"]==2}
+			        <iframe height="200" width="300" src="{$qArray['content']}" frameborder=0></iframe>
+			     {else}
+			      <img src="./source/plugin/xngs_jkt/template/{$qArray['content']}" />
+			      {/if}
+			     </div> 
+			     {/if}
+			    {loop $qArray["items"] $k  $item}
+			      {if ($qArray["typeid"]==1||$qArray["typeid"]==2) }
+				      <input onclick="gotoDiv({echo $key+1},$qArray['id'],$item['id'],this.value, $k,$qArray['typeid'],$qArray['trueanswer'],$qArray['onelevel']);" id="$qArray['id']" name="$qArray['id']" type="radio" value="$item['id']" >$item['content']</input>
+				      <input id="{$qArray['id']}_{$item['id']}" type="hidden" value="$k"/>
+				  {/if}   
+			      {if ($qArray["typeid"]==3)}
+			      	<input onclick="gotoDiv({echo $key+1},$qArray['id'],$item['id'],this.value, $k,$qArray['typeid'],'$qArray['trueanswer']',$qArray['onelevel']);" id="$qArray['id']" name="$qArray['id']" type="checkbox" value="$item['id']" >$item['content']</input>
+				      <input id="{$qArray['id']}_{$item['id']}" type="hidden" value="$k"/>
+			      {/if}
+			      {if ($qArray["typeid"]==1||$qArray["typeid"]==3)&&($k+1!=count($qArray["items"]))} <br/> {/if}
+			   {/loop}
+			    </div>
+			   </div>
+			    <div class="exam_line"></div>
+             {/loop}
+			 <form id="form2" name="form2" method="post" action="">
+			 <input type="hidden" name="formhash" value="<!--{eval echo formhash();}-->" /> 
+		      <input type="hidden" id="rid" name="rid" value="{$rid}"/>
+		      <input type="hidden" id="flag" name="flag" value="subm"/>
+		      <input type="hidden" id="tb" name="tb" value="{$tb}"/>
+		      <input type="hidden" id="onelevelname" name="onelevelname" value="{$onelevelname}"/>
+		      <input type="hidden" id="jzmc" name="jzmc" value="{$jzmc}"/>
+		      <input type="hidden" id="username" name="username" value="{$username}"/>
+		      <input name="submitnum" type="hidden" id="submitnum" value="{$submitnum}">
+	         </form>
+			 
+			  <div class="exam_list_foot">	
+			     <div class="exam_bt01"><a href="javascript:subm();"></a></div>
+			       <div class="exam_bt_home"><a href="/plugin.php?id=xngs_jkt:index"></a></div>
+				  <div class="exam_bt04"><a href="javascript:history.go(-1);"></a></div>
+		      </div>
+			  
+			  
+		  
+	        </div> 
+		  </td>
+		   <td valign="top" class="exam_main_r2"><div class="exam_main_r2"></div></td>
+      </tr>
+	  </table>
+  </div>
+  <form id="form1" name="form1" method="post" action="">
+  <input type="hidden" name="formhash" value="<!--{eval echo formhash();}-->" /> 
+	    <input name="onelevel" type="hidden" id="onelevel" value="">
+	    <input name="kc" type="hidden" id="kc" value="">
+	 </form> 
+<script type="text/JavaScript">
+ 	  function subm(){
+ 		 //jq.messager.confirm("$lang['tjqr']", "$lang['sftjqr']", function(r){
+			//	if (r){
+					form2.submit();
+			//	}
+			//});
+ 		}
+ 	  
+ 	 function cantdo(){
+ 		//jq.messager.alert("$lang['ts']","$lang['zbksy']");  
+ 	 }
+ 	function selkc(onelevel,kc){
+			document.getElementById("onelevel").value=onelevel;
+		document.getElementById("kc").value=kc;
+		form1.submit();
+	}
+   	</script>
+	
+   <div class="foot">
+     {template xngs_jkt:foot_exam}
+    </div>
+	   
+	   
+</div>
+<!--  左边结束 -->
+
+<!--右边开始 -->
+<div class="exam_right_nav">
+
+<div class="exam_right">
+   <div class="exam_right_tit f16cb">$lang['km1name'] &nbsp; $lang['llks']</div>
+   <div class="exam_rightbt01"><a href="javascript:selkc(1,1);"></a></div>
+   <div class="exam_rightbt02"><a href="javascript:selkc(1,2);"></a></div>
+   <div class="exam_rightbt03"><a href="javascript:selkc(1,3);"></a></div> 
+  </div>
+  
+  
+  <div class="exam_right_ad">
+    <a href="$examadvlink_arr[0]"><img src="$examadvurl_arr[0]" /></a><br>
+      <a href="$examadvlink_arr[1]"><img src="$examadvurl_arr[1]" /></a>
+  </div> 
+ 
+
+ <div   class="fixed" >
+   <div class="exam_right_num f120">
+   <div class="exam_right_tit"><span class="f12blue">$lang['sysj']</span><span id="clock" name="clock" class="f12red">$lang['km4zsjs']</span></div>
+   <div class="exam_num">
+    <div class='num_bt' id='fk1'><a href='javascript:justGotoDiv(1)'>1</a></div>
+	<div class='num_bt' id='fk2'><a href='javascript:justGotoDiv(2)'>2</a></div>
+	<div class='num_bt' id='fk3'><a href='javascript:justGotoDiv(3)'>3</a></div>
+	<div class='num_bt' id='fk4'><a href='javascript:justGotoDiv(4)'>4</a></div>
+	<div class='num_bt' id='fk5'><a href='javascript:justGotoDiv(5)'>5</a></div>
+	<div class='num_bt' id='fk6'><a href='javascript:justGotoDiv(6)'>6</a></div>
+	<div class='num_bt' id='fk7'><a href='javascript:justGotoDiv(7)'>7</a></div>
+	<div class='num_bt' id='fk8'><a href='javascript:justGotoDiv(8)'>8</a></div>
+	<div class='num_bt' id='fk9'><a href='javascript:justGotoDiv(9)'>9</a></div>
+	<div class='num_bt' id='fk10'><a href='javascript:justGotoDiv(10)'>10</a></div>
+	<div class='num_bt' id='fk11'><a href='javascript:justGotoDiv(11)'>11</a></div>
+	<div class='num_bt' id='fk12'><a href='javascript:justGotoDiv(12)'>12</a></div>
+	<div class='num_bt' id='fk13'><a href='javascript:justGotoDiv(13)'>13</a></div>
+	<div class='num_bt' id='fk14'><a href='javascript:justGotoDiv(14)'>14</a></div>
+	<div class='num_bt' id='fk15'><a href='javascript:justGotoDiv(15)'>15</a></div>
+	<div class='num_bt' id='fk16'><a href='javascript:justGotoDiv(16)'>16</a></div>
+	<div class='num_bt' id='fk17'><a href='javascript:justGotoDiv(17)'>17</a></div>
+	<div class='num_bt' id='fk18'><a href='javascript:justGotoDiv(18)'>18</a></div>
+	<div class='num_bt' id='fk19'><a href='javascript:justGotoDiv(19)'>19</a></div>
+	<div class='num_bt' id='fk20'><a href='javascript:justGotoDiv(20)'>20</a></div>
+	<div class='num_bt' id='fk21'><a href='javascript:justGotoDiv(21)'>21</a></div>
+	<div class='num_bt' id='fk22'><a href='javascript:justGotoDiv(22)'>22</a></div>
+	<div class='num_bt' id='fk23'><a href='javascript:justGotoDiv(23)'>23</a></div>
+	<div class='num_bt' id='fk24'><a href='javascript:justGotoDiv(24)'>24</a></div>
+	<div class='num_bt' id='fk25'><a href='javascript:justGotoDiv(25)'>25</a></div>
+	<div class='num_bt' id='fk26'><a href='javascript:justGotoDiv(26)'>26</a></div>
+	<div class='num_bt' id='fk27'><a href='javascript:justGotoDiv(27)'>27</a></div>
+	<div class='num_bt' id='fk28'><a href='javascript:justGotoDiv(28)'>28</a></div>
+	<div class='num_bt' id='fk29'><a href='javascript:justGotoDiv(29)'>29</a></div>
+	<div class='num_bt' id='fk30'><a href='javascript:justGotoDiv(30)'>30</a></div>
+	<div class='num_bt' id='fk31'><a href='javascript:justGotoDiv(31)'>31</a></div>
+	<div class='num_bt' id='fk32'><a href='javascript:justGotoDiv(32)'>32</a></div>
+	<div class='num_bt' id='fk33'><a href='javascript:justGotoDiv(33)'>33</a></div>
+	<div class='num_bt' id='fk34'><a href='javascript:justGotoDiv(34)'>34</a></div>
+	<div class='num_bt' id='fk35'><a href='javascript:justGotoDiv(35)'>35</a></div>
+	<div class='num_bt' id='fk36'><a href='javascript:justGotoDiv(36)'>36</a></div>
+	<div class='num_bt' id='fk37'><a href='javascript:justGotoDiv(37)'>37</a></div>
+	<div class='num_bt' id='fk38'><a href='javascript:justGotoDiv(38)'>38</a></div>
+	<div class='num_bt' id='fk39'><a href='javascript:justGotoDiv(39)'>39</a></div>
+	<div class='num_bt' id='fk40'><a href='javascript:justGotoDiv(40)'>40</a></div>
+	<div class='num_bt' id='fk41'><a href='javascript:justGotoDiv(41)'>41</a></div>
+	<div class='num_bt' id='fk42'><a href='javascript:justGotoDiv(42)'>42</a></div>
+	<div class='num_bt' id='fk43'><a href='javascript:justGotoDiv(43)'>43</a></div>
+	<div class='num_bt' id='fk44'><a href='javascript:justGotoDiv(44)'>44</a></div>
+	<div class='num_bt' id='fk45'><a href='javascript:justGotoDiv(45)'>45</a></div>
+	<div class='num_bt' id='fk46'><a href='javascript:justGotoDiv(46)'>46</a></div>
+	<div class='num_bt' id='fk47'><a href='javascript:justGotoDiv(47)'>47</a></div>
+	<div class='num_bt' id='fk48'><a href='javascript:justGotoDiv(48)'>48</a></div>
+	<div class='num_bt' id='fk49'><a href='javascript:justGotoDiv(49)'>49</a></div>
+	<div class='num_bt' id='fk50'><a href='javascript:justGotoDiv(50)'>50</a></div>
+    </div>
+	  
+	<div class="exam_right_foot">
+	   <table width="100%" cellpadding="0" cellspacing="0" border="0" class=" f120">
+	       <tr>
+	       	   <Td><input id="ydt" name="ydt" type="text" style='color:blue'  value="" /></Td>
+			  <Td>$lang['ydts']</Td>
+		      <Td><input id="wdt" name="wdt" type="text" style='color:red' value=""/></Td>
+			  <Td>$lang['wdts']</Td>
+			  <Td><input name="" type="text"/></Td>
+			  <Td>$lang['dcts']</Td>
+			  <Td><input name="" type="text" /></Td>
+			  <Td>$lang['bjts']</Td>
+	     </tr></table>
+    </div> 
+	  
+	<div class="exam_right_bt">
+	    <div class="exam_bt01"><a href="javascript:subm();"></a></div>
+		<div class="exam_bt02"><a href="javascript:cantdo();"></a></div>
+		<div class="exam_bt03"><a href="javascript:cantdo();"></a></div>
+		<div class="exam_bt04"><a href="javascript:cantdo();"></a></div>
+	  </div>  
+	  
+	 </div>  
+  </div>  
+  
+  
+  
+   
+<div class="exam_right">
+  <div class="exam_right_tit f16cb">$lang['km4name']&nbsp; $lang['llks']</div>
+   <div class="exam_rightbt01"><a href="javascript:selkc(4,1);"></a></div>
+   <div class="exam_rightbt02"><a href="javascript:selkc(4,2);"></a></div>
+   <div class="exam_rightbt03"><a href="javascript:selkc(4,3);"></a></div> 
+  </div> 
+   
+<div class="exam_right_ad">
+     <a href="$examadvlink_arr[2]"><img src="$examadvurl_arr[2]" /></a><br>
+    <a href="$examadvlink_arr[3]"> <img src="$examadvurl_arr[3]" /></a>
+  </div> 
+ 
+ 
+ 
+  
+  
+  </div>
+ <!-- 右边结束 -->
+   
+   </div>
+  </body>
+ <!--{template common/footer}-->

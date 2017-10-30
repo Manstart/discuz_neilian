@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.2]]></item>
+	<item id="Time"><![CDATA[2015-12-15 21:42]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://dzx32.php.com/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[[DC]每日簽到]]></item>
+			<item id="identifier"><![CDATA[dc_signin]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dc_signin/]]></item>
+			<item id="copyright"><![CDATA[大創網絡]]></item>
+			<item id="version"><![CDATA[v1.0.5]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[dc_signin]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[每日簽到]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[5]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[group]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[簽到等級]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[emot]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[簽到表情]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[extend]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[擴展功能]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="5">
+					<item id="name"><![CDATA[llreward]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[累連獎勵]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="6">
+					<item id="name"><![CDATA[tool]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[工具]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[4]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,F1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[是否開啟]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[open]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[全局頂部簽到]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isglobal]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[帖子側邊顯示]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[sideshow]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[簽到規則[請使用html代碼]]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[notice]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[1．獎勵措施︰隨機獎勵10－50塊金幣，另額外獎勵不定（此需要對應的擴展功能實現）。<br/>
+2．簽到時間︰8︰00－24︰00<br/>
+3．要求簽到信息的思想內容健康、積極向上。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[允許使用的用戶組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[groups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[20]]></item>
+					<item id="7"><![CDATA[16]]></item>
+					<item id="8"><![CDATA[17]]></item>
+					<item id="9"><![CDATA[18]]></item>
+					<item id="10"><![CDATA[19]]></item>
+					<item id="11"><![CDATA[1]]></item>
+					<item id="12"><![CDATA[2]]></item>
+					<item id="13"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[是否開啟簽到時間段限制]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[timeopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[開始時間段]]></item>
+				<item id="description"><![CDATA[24小時制，請填寫整數，可以與結束時間段相同，例如我開始填8時，結束填23時，那麼簽到時間則是每天的8:00-23:59.]]></item>
+				<item id="variable"><![CDATA[stime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[8]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[結束時間段]]></item>
+				<item id="description"><![CDATA[同上]]></item>
+				<item id="variable"><![CDATA[ftime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[23]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[基礎獎勵積分]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[extcredit]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[最少獎勵積分值]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[mincredit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[最多獎勵積分值]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[maxcredit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[50]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="pluginname"><![CDATA[每日簽到]]></item>
+				<item id="weekarray">
+					<item id="0"><![CDATA[周日]]></item>
+					<item id="1"><![CDATA[周一]]></item>
+					<item id="2"><![CDATA[周二]]></item>
+					<item id="3"><![CDATA[周三]]></item>
+					<item id="4"><![CDATA[周四]]></item>
+					<item id="5"><![CDATA[周五]]></item>
+					<item id="6"><![CDATA[周六]]></item>
+				</item>
+				<item id="signingrouptips"><![CDATA[<li>用戶按簽到次數提升簽到級別,請正確設置簽到次數,必須設置一個的最低簽到次數為1的簽到組</li><li>簽到級別圖標必須放置source/plugin/dc_signin/images/icon/下</li>]]></item>
+				<item id="signingroup"><![CDATA[簽到級別]]></item>
+				<item id="groupname"><![CDATA[名稱]]></item>
+				<item id="dayslower"><![CDATA[最低簽到次數]]></item>
+				<item id="icon"><![CDATA[級別ICON]]></item>
+				<item id="add"><![CDATA[添加]]></item>
+				<item id="setok"><![CDATA[操作成功\！]]></item>
+				<item id="signindh">
+					<item id="index"><![CDATA[簽到首頁]]></item>
+					<item id="my"><![CDATA[我的簽到]]></item>
+					<item id="qdlist"><![CDATA[簽到記錄]]></item>
+					<item id="ranklist"><![CDATA[排行榜]]></item>
+					<item id="qddj"><![CDATA[簽到等級說明]]></item>
+				</item>
+				<item id="signinemottips"><![CDATA[<li>表情設置處，表情圖片必須放置source/plugin/dc_signin/images/emot/下</li>]]></item>
+				<item id="signinemotn"><![CDATA[簽到表情]]></item>
+				<item id="signinemot">
+					<item id="displayorder"><![CDATA[排序]]></item>
+					<item id="name"><![CDATA[名稱]]></item>
+					<item id="text"><![CDATA[簽到文本]]></item>
+					<item id="icon"><![CDATA[ICON]]></item>
+				</item>
+				<item id="issign"><![CDATA[您今日已經簽過到~~]]></item>
+				<item id="isnoallowgroup"><![CDATA[您所在的用戶組不允許\簽到]]></item>
+				<item id="isnoinrighttime"><![CDATA[簽到時間還未開始~~]]></item>
+				<item id="emoterror"><![CDATA[請選擇今日心情~]]></item>
+				<item id="nosaymsg"><![CDATA[今日沒有什麼想說的話~]]></item>
+				<item id="qdok"><![CDATA[簽到成功\~]]></item>
+				<item id="qdjfjl"><![CDATA[簽到積分獎勵]]></item>
+				<item id="extend_isinstall"><![CDATA[已安裝項]]></item>
+				<item id="extend_isnoinstall"><![CDATA[未安裝項]]></item>
+				<item id="extend_title"><![CDATA[擴展名稱]]></item>
+				<item id="extend_des"><![CDATA[擴展描述]]></item>
+				<item id="extend_author"><![CDATA[作者]]></item>
+				<item id="extend_version"><![CDATA[版本]]></item>
+				<item id="extend_caozuo"><![CDATA[操作]]></item>
+				<item id="uninstall"><![CDATA[卸載]]></item>
+				<item id="install"><![CDATA[安裝]]></item>
+				<item id="upgrade"><![CDATA[升級]]></item>
+				<item id="error"><![CDATA[出現錯誤！！]]></item>
+				<item id="installerror"><![CDATA[安裝失敗]]></item>
+				<item id="installsucceed"><![CDATA[安裝({identify})成功\！]]></item>
+				<item id="intstallcheck"><![CDATA[是否安裝標識碼為({identify})的組件]]></item>
+				<item id="uninstallerror"><![CDATA[卸載失敗]]></item>
+				<item id="uninstallsucceed"><![CDATA[卸載({title})成功\]]></item>
+				<item id="unintstallcheck"><![CDATA[是否卸載({title})]]></item>
+				<item id="ugradeerror"><![CDATA[升級失敗]]></item>
+				<item id="ugradesucceed"><![CDATA[成功\({title})成功\]]></item>
+				<item id="ugradecheck"><![CDATA[是否升級({title})]]></item>
+				<item id="set"><![CDATA[配置]]></item>
+				<item id="randreward"><![CDATA[隨機獎勵]]></item>
+				<item id="nosignin"><![CDATA[該用戶從未簽到]]></item>
+				<item id="taxq"><![CDATA[TA的每日心情]]></item>
+				<item id="no_tool"><![CDATA[暫無可用工具]]></item>
+				<item id="tool_config"><![CDATA[配置]]></item>
+				<item id="tool_list"><![CDATA[工具列表]]></item>
+				<item id="tool_table"><![CDATA[名稱,描述,操作]]></item>
+				<item id="setsucceed"><![CDATA[執行完成]]></item>
+				<item id="vipsignin"><![CDATA[簽到獎勵]]></item>
+				<item id="vipsigninmsg"><![CDATA[VIP用戶簽到獎勵]]></item>
+				<item id="llrewarderror"><![CDATA[對不起，你尚未安裝類連獎勵擴展]]></item>
+				<item id="llrewardtips"><![CDATA[<li>請合理設置簽到累連獎勵規則</li><li>其中累計次數為一次性獎勵，其余三種（連續次數、月累計次數、月連續次數）為循環獎勵</li>]]></item>
+				<item id="llrewardrule"><![CDATA[獎勵規則]]></item>
+				<item id="llrewardruleadd"><![CDATA[添加]]></item>
+				<item id="llreward_type"><![CDATA[獎勵規則限定]]></item>
+				<item id="llreward_count"><![CDATA[限定簽到次數]]></item>
+				<item id="llreward_msg"><![CDATA[獎勵文本]]></item>
+				<item id="llreward_msg_1"><![CDATA[此項設置會在用戶簽到時顯示，不要超出45個字符.如︰累計簽到10天獎勵金錢10]]></item>
+				<item id="llreward_dateline"><![CDATA[時間]]></item>
+				<item id="lltype">
+					<item id="lj"><![CDATA[累計次數]]></item>
+					<item id="lx"><![CDATA[連續次數]]></item>
+					<item id="mlj"><![CDATA[月累計次數]]></item>
+					<item id="mlx"><![CDATA[月連續次數]]></item>
+				</item>
+				<item id="llreward_ext"><![CDATA[獎勵類型]]></item>
+				<item id="selectreward"><![CDATA[--選擇獎勵類型--]]></item>
+				<item id="selectrewardright"><![CDATA[請選擇獎勵類型]]></item>
+				<item id="llreward_exterror"><![CDATA[對不起，無獎勵類型可用]]></item>
+				<item id="delete"><![CDATA[刪除]]></item>
+				<item id="edit"><![CDATA[編輯]]></item>
+				<item id="deletecheck"><![CDATA[是否刪除該規則？]]></item>
+				<item id="deletesucceed"><![CDATA[刪除成功\！]]></item>
+				<item id="succeed"><![CDATA[操作成功\！]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="pluginname"><![CDATA[每日簽到]]></item>
+				<item id="qd"><![CDATA[簽到]]></item>
+				<item id="isqd"><![CDATA[已簽到]]></item>
+				<item id="day"><![CDATA[天]]></item>
+				<item id="ge"><![CDATA[個]]></item>
+				<item id="maohao"><![CDATA[︰]]></item>
+				<item id="monthdays"><![CDATA[本月已簽到︰]]></item>
+				<item id="totaldays"><![CDATA[累計已簽到︰]]></item>
+				<item id="isreward"><![CDATA[已獲得]]></item>
+				<item id="qdtj"><![CDATA[簽到統計]]></item>
+				<item id="qdtj_todaycount"><![CDATA[今日已簽到]]></item>
+				<item id="qdtj_yestercount"><![CDATA[昨日共簽到]]></item>
+				<item id="qdtj_historycount"><![CDATA[歷史最高數]]></item>
+				<item id="ren"><![CDATA[人]]></item>
+				<item id="copyright"><![CDATA[版權信息]]></item>
+				<item id="dccp"><![CDATA[【DC】]]></item>
+				<item id="copyrdc"><![CDATA[&copy;大創網絡]]></item>
+				<item id="condaysstr"><![CDATA[您已經連續簽到]]></item>
+				<item id="groupname"><![CDATA[簽到等級]]></item>
+				<item id="dayslower"><![CDATA[最低簽到次數]]></item>
+				<item id="icon"><![CDATA[級別圖標]]></item>
+				<item id="username"><![CDATA[用戶名]]></item>
+				<item id="xinqing"><![CDATA[心情]]></item>
+				<item id="content"><![CDATA[內容]]></item>
+				<item id="reward"><![CDATA[獎勵]]></item>
+				<item id="qddate"><![CDATA[簽到時間]]></item>
+				<item id="ltotaldays"><![CDATA[總天數]]></item>
+				<item id="lmonthdays"><![CDATA[月天數]]></item>
+				<item id="nowgroup"><![CDATA[目前等級]]></item>
+				<item id="bcredit"><![CDATA[上次獎勵]]></item>
+				<item id="totalcredit"><![CDATA[總獎勵]]></item>
+				<item id="orderbydays"><![CDATA[按總天數]]></item>
+				<item id="orderbymonthdays"><![CDATA[按月天數]]></item>
+				<item id="orderbycredit"><![CDATA[按總獎勵]]></item>
+				<item id="nosignin"><![CDATA[您從未簽到過，趕快簽到吧!]]></item>
+				<item id="issignord"><![CDATA[您今天已經簽到過了或者簽到時間還未開始]]></item>
+				<item id="isnotsign"><![CDATA[您今天還未簽到~~]]></item>
+				<item id="issiginin"><![CDATA[，今日您已簽到。]]></item>
+				<item id="indext_1"><![CDATA[尊敬的]]></item>
+				<item id="indext_2"><![CDATA[，您累計已簽到: ]]></item>
+				<item id="indext_3"><![CDATA[，連續簽到: ]]></item>
+				<item id="indext_4"><![CDATA[您本月已累計簽到: ]]></item>
+				<item id="indext_5"><![CDATA[，本月連續簽到: ]]></item>
+				<item id="indext_6"><![CDATA[您上次簽到時間: ]]></item>
+				<item id="indext_7"><![CDATA[您目前獲得的總獎勵為: ]]></item>
+				<item id="indext_8"><![CDATA[，上次獲得的獎勵為: ]]></item>
+				<item id="indext_9"><![CDATA[您目前的等級: ]]></item>
+				<item id="indext_10"><![CDATA[，您只需再簽到]]></item>
+				<item id="indext_11"><![CDATA[天就可以提升到下一個等級: ]]></item>
+				<item id="confirm"><![CDATA[確定]]></item>
+				<item id="mobile_ljqd"><![CDATA[累計簽到]]></item>
+				<item id="mobile_lxqd"><![CDATA[連續簽到]]></item>
+				<item id="mobile_jl"><![CDATA[累計]]></item>
+				<item id="mobile_2"><![CDATA[您累計已簽到: ]]></item>
+				<item id="mobile_8"><![CDATA[您上次獲得的獎勵為: ]]></item>
+				<item id="mobile_10"><![CDATA[您只需再簽到]]></item>
+				<item id="mobile_11"><![CDATA[天就提升到: ]]></item>
+				<item id="return"><![CDATA[返回首頁]]></item>
+			</item>
+			<item id="installlang">
+				<item id="emot1">
+					<item id="0"><![CDATA[開心]]></item>
+					<item id="1"><![CDATA[記上一筆，hold住我的快樂！]]></item>
+				</item>
+				<item id="emot2">
+					<item id="0"><![CDATA[難過]]></item>
+					<item id="1"><![CDATA[格式化自己，只為刪除那些不愉快！]]></item>
+				</item>
+				<item id="emot3">
+					<item id="0"><![CDATA[無聊]]></item>
+					<item id="1"><![CDATA[為了維護宇宙和平，打起精神來！~~]]></item>
+				</item>
+				<item id="emot4">
+					<item id="0"><![CDATA[郁悶]]></item>
+					<item id="1"><![CDATA[沒有開心，哪來的幸福？要開心哦]]></item>
+				</item>
+				<item id="emot5">
+					<item id="0"><![CDATA[擦汗]]></item>
+					<item id="1"><![CDATA[人生太多無奈，今天的事讓我真是傻眼呀！]]></item>
+				</item>
+				<item id="emot6">
+					<item id="0"><![CDATA[大哭]]></item>
+					<item id="1"><![CDATA[人生太多事，今天就在這里大哭一次，希望在明天！]]></item>
+				</item>
+				<item id="emot7">
+					<item id="0"><![CDATA[慵懶]]></item>
+					<item id="1"><![CDATA[還是繼續慵懶下去吧~~]]></item>
+				</item>
+				<item id="emot8">
+					<item id="0"><![CDATA[萌噠]]></item>
+					<item id="1"><![CDATA[每天萌萌噠~~]]></item>
+				</item>
+				<item id="emot9">
+					<item id="0"><![CDATA[可愛]]></item>
+					<item id="1"><![CDATA[不必轉頭就可以看的笑臉。或是一只可愛的小不點~~]]></item>
+				</item>
+				<item id="emot10">
+					<item id="0"><![CDATA[閉嘴]]></item>
+					<item id="1"><![CDATA[今日不說話啊不說話~]]></item>
+				</item>
+				<item id="group">
+					<item id="1"><![CDATA[初來乍到]]></item>
+					<item id="3"><![CDATA[常住居民I]]></item>
+					<item id="7"><![CDATA[常住居民II]]></item>
+					<item id="15"><![CDATA[常住居民III]]></item>
+					<item id="30"><![CDATA[偶爾看看I]]></item>
+					<item id="60"><![CDATA[偶爾看看II]]></item>
+					<item id="120"><![CDATA[偶爾看看III]]></item>
+					<item id="240"><![CDATA[以壇為家I]]></item>
+					<item id="360"><![CDATA[以壇為家II]]></item>
+					<item id="720"><![CDATA[以壇為家III]]></item>
+					<item id="1440"><![CDATA[伴壇終老]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	</item>
+</root>

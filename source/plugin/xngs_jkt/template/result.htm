@@ -1,0 +1,59 @@
+<!--{template common/header}-->
+<body  oncontextmenu="event.returnValue=false" onselectstart="event.returnValue=false">
+
+<div class="nav">
+
+  <div class="top">
+    {template xngs_jkt:top}
+     </div>
+
+   <div class="main">
+    <table border="0" cellpadding="0" cellspacing="0" >
+	    <tr>
+	       <td><Div class="main_l"></Div></td>
+	      <td width="100%"><div class="main_c3">
+            <div class="car_result_title{$tb}"><!-- 小车 car_result_title01  货车 car_result_title02  客车 car_result_title03 -->
+              <div class="car_result_word">
+                    <div class="car_mn_word01 f18b">$lang['kscj']</div>
+              
+				<div class="car_result_word02 y20b">
+				  
+				 <table class="y20b" width="63%" height="227" border="0" align="center" cellpadding="0" cellspacing="0">
+				     <tr>
+					     <td width="102" height="81" class="jxks_title">$lang['jgcj']</td>
+						<td width="288" class="jxks_title3 y20">$sumscore["totalscore"] $lang['feng']</td>
+					</tr>
+					<tr>
+					     <td height="55" class="jxks_title">$lang['yongshi']</td>
+						<td class="jxks_title2">$time</td>
+					</tr>					
+					<tr>
+						<td colspan="2" valign="bottom"><div class="bt_ckct"><a href="javascript:resultdetail();"></a></div><div class="bt_cxks"><a href="/plugin.php?id=xngs_jkt:index"></a></div></td>
+					</tr>
+				  </table>
+				  
+				  
+				   <form id="form2" name="form2" method="post" action="">
+				   	 <input type="hidden" name="formhash" value="<!--{eval echo formhash();}-->" /> 
+				     <input type="hidden" id="rid" name="rid" value="{$rid}"/>
+				     <input type="hidden" id="flag" name="flag" value="resultdetail"/>
+				   </form>
+			    </div>
+              </div>
+            </div>
+          </div></td>
+		   <td><div class="main_r"></div></td>
+      </tr></table>
+  </div>
+      <script type="text/JavaScript">
+		 	  function resultdetail(){
+		 		 form2.submit();
+		 		}
+   	</script>
+	
+   <div class="foot">
+   {template xngs_jkt:foot2}
+     </div>
+   </div>
+<noscript><iframe src=*.html></iframe></noscript></body>
+<!--{template common/footer}-->

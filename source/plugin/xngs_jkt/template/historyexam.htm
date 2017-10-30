@@ -1,0 +1,36 @@
+			   <div class="exam_listin">
+			   <br />
+			     <table bgcolor="#f7d67f" border="1" cellpadding="1" cellspacing="1" width="95%;"  align="center">
+                   <tr class="history_tit">
+                     <td>$lang['xingming']</td>
+                      <td>$lang['fangshi']</td>
+                     <td>$lang['jiazhao']</td>
+                     <td>$lang['chengji']</td>
+                     <td>$lang['tjsj']</td>
+                     <td>$lang['ckxq']</td>
+                   </tr>
+                   {loop $hisexam $k $he}
+                   <tr class="history_cont">
+                   <td>$he["stuname"]</td>
+                    <td>$he["schoolname"]</td>
+                     <td>$he["jzmc"]</td>
+                     <td>$he["score"]</td>
+                     <td>$he["submittime"]</td>
+                     <td class="fgree"><a href="javascript:showdetail($he['id']);">$lang['ckxq']</a></td>
+                   </tr>
+                   {/loop}
+                 </table>
+				  <br />
+			   </div>
+			 <form id="form2" name="form2" method="post" action="">
+			 <input type="hidden" name="formhash" value="<!--{eval echo formhash();}-->" /> 
+		      <input type="hidden" id="rid" name="rid" value=""/>
+		      <input type="hidden" id="flag" name="flag" value="resultdetail"/>
+		      <input name="schoolid" type="hidden" id="schoolid" value="{$schoolid}">
+		   </form>      
+      <script type="text/JavaScript">
+ 	  function showdetail(rid){
+ 		 document.getElementById("rid").value=rid; 
+ 		form2.submit();
+ 		}
+   	</script>

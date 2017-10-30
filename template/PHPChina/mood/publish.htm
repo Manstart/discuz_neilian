@@ -1,0 +1,18 @@
+<!--//说明: 显示公共头部模板-->
+<!--{template common/header}-->
+
+<!--//说明: 开始显示表单-->
+<div id="ct" class="wp cl">
+    <h1 class="mt"><a href="mood.php?mod=list">心情墙</a> - <b>发表心情</b></h1>
+    <div class="bm">
+        <form method="post" action="mood.php?mod=publish" class="pns">
+            <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+            <!--FORMHASH 自动产生，submitcheck()函数要判断这个值-->
+            <textarea name="message"></textarea><br><br>
+            <input type="submit" class="pn vm" name="submit" value="发表" />
+        </form>
+    </div>
+</div>
+
+<!--//说明: 显示公共尾部模板-->
+<!--{template common/footer}-->

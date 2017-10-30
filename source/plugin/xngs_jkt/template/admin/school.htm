@@ -1,0 +1,14 @@
+ <table  border="1" cellpadding="1" cellspacing="1" width="98%;"  align="center">
+ <tr >
+                     <td>id</td>
+                     <td>驾校名称</td>
+                   	 <td>支持网上报名</td>
+</tr>
+{loop $schools $key $school}
+ <tr >
+        <td>{$school['Id']}</td>
+        <td>{$school['sname']}</td>
+      	 <td>{$school['signup']}</td>
+</tr> 
+{/loop}
+</table>

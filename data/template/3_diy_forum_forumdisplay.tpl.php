@@ -1,12 +1,12 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('forumdisplay');
 0
-|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/forum/forumdisplay_leftside.htm', 1506400829, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
-|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/forum/recommend.htm', 1506400829, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
-|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/common/seccheck.htm', 1506400829, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
-|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/forum/forumdisplay_list.htm', 1506400829, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
-|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/forum/forumdisplay_sort.htm', 1506400829, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
-|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/forum/search_sortoption.htm', 1506400829, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
-|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/forum/search_sortoption.htm', 1506400829, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
+|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/forum/forumdisplay_leftside.htm', 1508895068, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
+|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/forum/recommend.htm', 1508895068, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
+|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/common/seccheck.htm', 1508895068, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
+|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/forum/forumdisplay_list.htm', 1508895068, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
+|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/forum/forumdisplay_sort.htm', 1508895068, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
+|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/forum/search_sortoption.htm', 1508895068, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
+|| checktplrefresh('./template/default/forum/forumdisplay.htm', './template/default/forum/search_sortoption.htm', 1508895068, 'diy', './data/template/3_diy_forum_forumdisplay.tpl.php', './template/PHPChina', 'forum/forumdisplay')
 ;?><?php include template('common/header'); if($_G['forum']['ismoderator']) { ?>
 <script src="<?php echo $_G['setting']['jspath'];?>forum_moderate.js?<?php echo VERHASH;?>" type="text/javascript"></script>
 <?php } ?>

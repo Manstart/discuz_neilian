@@ -1,0 +1,26 @@
+<!--//说明: 显示公共头部模板-->
+<!--{template common/header}-->
+
+<!--//说明: 开始显示留言-->
+<div id="ct" class="wp cl">
+    <h1 class="mt">心情墙 - <!--{if $_G[uid]}--><a href="mood.php?mod=publish" style="color:blue;">发表心情</a><!--{/if}--></h1> 
+    <div class="bm">
+        <!--{if $list}-->
+            <!--//说明: loop 循环一个数组 相当于foreach(){}-->
+            <!--{loop $list $mood}-->
+                <a href="home.php?mod=space&uid=$mood[uid]" target="_blank"><!--{avatar($value[authorid],small)}--></a><br>
+                <a href="home.php?mod=space&uid=$mood[uid]" title="$mood[username]" target="_blank" class="xi2">$mood[username]</a> 发表于: $mood[dateline]
+                <br>
+                心情: $mood[message]
+                <hr>
+            <!--{/loop}-->
+            <!--//说明: 显示准备好的分页链接-->
+            $multi
+        <!--{else}-->
+            <p class="emp">暂时没有记录...</p>
+        <!--{/if}-->
+    </div>
+</div>
+
+<!--//说明: 显示公共尾部模板-->
+<!--{template common/footer}-->

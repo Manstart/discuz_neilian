@@ -90,7 +90,7 @@ $_config['security']['creditsafe']['times'] = 10;
 $_config['admincp']['founder'] = '1';
 $_config['admincp']['forcesecques'] = '0';
 $_config['admincp']['checkip'] = 1;
-$_config['admincp']['runquery'] = '0';
+$_config['admincp']['runquery'] = '1';
 $_config['admincp']['dbimport'] = 1;
 
 // --------------------------  CONFIG REMOTE  --------------------------- //

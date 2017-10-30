@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[hwh_doavatar.plugin]]></item>
+	<item id="RevisionID"><![CDATA[67419]]></item>
+	<item id="SN"><![CDATA[2017092620naWtALGozb]]></item>
+	<item id="RevisionDateline"><![CDATA[1471957201]]></item>
+	<item id="Data">
+		<item id="/admincp.inc.php"><![CDATA[056620091f6d439ace8dec52cd1c3eca]]></item>
+		<item id="/discuz_plugin_hwh_doavatar_SC_GBK.xml"><![CDATA[5ad9e0d5e912a6fbe5560821908e1d98]]></item>
+		<item id="/discuz_plugin_hwh_doavatar_SC_UTF8.xml"><![CDATA[3969aa49a3f177fd74fc23d5e0fccf9e]]></item>
+		<item id="/discuz_plugin_hwh_doavatar_TC_BIG5.xml"><![CDATA[1c561877ad7b82cd77739bb598235654]]></item>
+		<item id="/discuz_plugin_hwh_doavatar_TC_UTF8.xml"><![CDATA[67341ee124acdab73d8b2c41a8f78b6a]]></item>
+		<item id="/hwh_doavatar.class.php"><![CDATA[2173afccb53ba0dcaaffd9fce7b68e7e]]></item>
+	</item>
+</root>

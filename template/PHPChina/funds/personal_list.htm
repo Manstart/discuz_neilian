@@ -1,0 +1,19 @@
+<!--{template common/header}-->
+<style>
+.list_style{padding-left: 16px;}
+</style>
+<div id="ct" class="wp cl">
+        <div class="bm">
+        <!--{if $all_list}--> 
+
+            <!--{loop $all_list $per_app}-->
+               <a class="list_style"><!--{$per_app[personalApp_name]}--></a>于<!--{$per_app[personalApp_date]}-->申请个人使用<!--{$per_app[personalApp_reason]}-->，归还日期为<!--{$per_app[personalApp_return]}--><hr>
+            <!--{/loop}-->
+            <a href="{$_SERVER['PHP_SELF'].?page=($page-1)}">上一页</a>
+            <a href="{$_SERVER['PHP_SELF'].?page=($page+1)}">下一页</a>
+        <!--{else}-->
+            <p class="emp">暂时没有记录...</p>
+        <!--{/if}-->
+        </div>      
+</div>
+<!--{template common/footer}-->

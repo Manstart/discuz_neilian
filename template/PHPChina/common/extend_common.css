@@ -1,13 +1,1 @@
-#ft{background: #474443;color: #ddd;}
-#flk{    
-    width: 520px;
-    padding: 88px 50px 30px;
-    font-size: 20px;
-    text-align: right;
-    line-height: 22px;
-}
-#flk a{color: #fff;}
-#frt a{color: #fff;}
-#frt b{font-size: 45px;margin-left: 50px;color: #fff;}
-#frt p{margin-left: 46px;font-family: Arial;font-size: 1.4em;}
-#frt p:first-child{margin-top: 20px;}
+body{width: 100%;}

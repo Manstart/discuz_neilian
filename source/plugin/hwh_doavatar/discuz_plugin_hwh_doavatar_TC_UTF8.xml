@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2.5,X3,X3.1,X3.2,F1.0]]></item>
+	<item id="Time"><![CDATA[2016-07-15 11:00]]></item>
+	<item id="From"><![CDATA[海曼工作室 (http://www.hymanwu.com/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【海曼】提示用戶上傳頭像]]></item>
+			<item id="identifier"><![CDATA[hwh_doavatar]]></item>
+			<item id="description"><![CDATA[系統將提示未上傳頭像的用戶去上傳頭像!由于disucz默認沒有手機上傳頭像功能,如果開啟手機版則需安裝【手機修改頭像】插件 http://addon.discuz.com/?@hwh_member.plugin]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[hwh_doavatar/]]></item>
+			<item id="copyright"><![CDATA[H.W.H]]></item>
+			<item id="version"><![CDATA[1.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hwh_doavatar]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[hwh_doavatar]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="param"><![CDATA[a=hwh_member]]></item>
+					<item id="menu"><![CDATA[<font color="#00B600">手機修改頭像</font>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="param"><![CDATA[a=store]]></item>
+					<item id="menu"><![CDATA[<font color="#FF80FF">更</font><font color="#D556FF">多</font><font color="#AB2CFF">海</font><font color="#A002FF">曼</font><font color="#A000FF">應</font><font color="#A000FF">用</font>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,F1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[提示文字]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[tip_str]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[親,您還沒有上傳頭像,現在上傳嗎?]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[提醒時間]]></item>
+				<item id="description"><![CDATA[單位:分鐘 用戶每次取消後,多久再提醒一次,填0為一直提醒!]]></item>
+				<item id="variable"><![CDATA[time]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[開啟電腦版]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[open]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[開啟手機版]]></item>
+				<item id="description"><![CDATA[開啟手機版需安裝【手機修改頭像】插件 http://addon.discuz.com/?@hwh_member.plugin]]></item>
+				<item id="variable"><![CDATA[open_m]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="license"><![CDATA[  [*][size=4][color=blue]本插件版權歸屬插件作者[color=red][b]H.W.H[/b][/color]所有。
+[*]未經插件作者書面許可的情況下,任何人不得以任何形式對本產品進行反編譯、修改、轉讓、銷售以及在任何地方發布/轉發原版以及其衍生的修改版!
+[*][b]插件作者:[/b][url=http://wpa.qq.com/msgrd?v=3&uin=304916488&site=qq&menu=yes]H.W.H (點擊此處可發送QQ消息)[/url]
+[*][b]版權信息:[/b][color=red][b]海曼工作室[/b][/color]
+[*][b]插件官網:[/b][url]http://www.hymanwu.com/[/url]
+[*][b]作品簡介:[/b]系統將提示未上傳頭像的用戶去上傳頭像!
+[*][b]發布地址:[/b][url]http://addon.discuz.com/?@19547.developer[/url]
+[*]感謝您使用我們的插件,希望您能夠給我們提供更好的意見!
+]]></item>
+	</item>
+</root>

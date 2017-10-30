@@ -1,4 +1,5 @@
-<?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('discuz');?><?php include template('common/header'); ?><div id="pt" class="bm cl">
+<?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('discuz');
+block_get('5');?><?php include template('common/header'); ?><div id="pt" class="bm cl">
 <?php if(empty($gid) && $announcements) { ?>
 <div class="y">
 <div id="an">
@@ -25,7 +26,7 @@
 
 <?php if(empty($gid)) { ?>
 <div class="wp">
-<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+<!--[diy=diy1]--><div id="diy1" class="area"><div id="frame6vPz7p" class="frame move-span cl frame-1-1-1"><div class="title frame-title"><span class="titletext" style="font-size:18px;"><a href="forum.php?mod=forumdisplay&amp;fid=37" target="_blank" style="color:rgb(0, 0, 255) !important;">内联活动模块</a></span><span class="subtitle" style="font-size:18px;float:right;"><a href="forum.php?mod=forumdisplay&amp;fid=37" target="_blank" style="color:rgb(0, 0, 255) !important;">更多</a></span></div><div id="frame6vPz7p_left" class="column frame-1-1-1-l"><div id="frame6vPz7p_left_temp" class="move-span temp"></div><?php block_display('5');?></div><div id="frame6vPz7p_center" class="column frame-1-1-1-c"><div id="frame6vPz7p_center_temp" class="move-span temp"></div></div><div id="frame6vPz7p_right" class="column frame-1-1-1-r"><div id="frame6vPz7p_right_temp" class="move-span temp"></div></div></div></div><!--[/diy]-->
 </div>
 <?php } ?>
 
@@ -39,7 +40,7 @@
 </div>
 </div>
 <?php } ?>
-<!--[diy=diy_chart]--><div id="diy_chart" class="area"><div id="frameK9DmKU" class="frame move-span cl frame-1-1"><div class="title frame-title"><span class="titletext" style="font-size:24px;margin-left:600px;color:rgb(51, 51, 51);">hello , xuezhiqian</span></div><div id="frameK9DmKU_left" class="column frame-1-1-l"><div id="frameK9DmKU_left_temp" class="move-span temp"></div></div><div id="frameK9DmKU_center" class="column frame-1-1-r"><div id="frameK9DmKU_center_temp" class="move-span temp"></div></div></div></div><!--[/diy]-->
+<!--[diy=diy_chart]--><div id="diy_chart" class="area"></div><!--[/diy]-->
 <div class="mn">
 
 <?php if(!empty($_G['setting']['grid']['showgrid'])) { ?>

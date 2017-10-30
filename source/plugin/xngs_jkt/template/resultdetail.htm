@@ -1,0 +1,190 @@
+<!--{template common/header}-->
+<body  oncontextmenu="event.returnValue=false" onselectstart="event.returnValue=false">
+
+<div class="nav_exam">
+
+<!--左边开始 -->
+
+  <div class="exam_left">
+  
+  <div class="top">
+    {template xngs_jkt:top_exam}
+     </div>
+
+   <div class="main">
+ <table border="0" cellpadding="0" cellspacing="0" width="100%">
+	    <tr>
+          <td valign="top"><Div class="exam_main_l_error"></Div></td>
+	      <td width="100%" valign="top">
+		    <div class="exam_main_c_error">
+		    <div class="exam_car01_error"><!-- 小车 car_mn_title01  货车 car_mn_title02  客车 car_mn_title03 -->
+              <div class="exam_car_word">
+	             <div class="exam_error_word02  f14b">{$jzmc} {$onelevelname}&nbsp;&nbsp;$lang['shijian'] {$submittime} </div>
+                <div class="car_mn_word01 f14b">$lang['score']<i><b><font color="#72ab03" size="5">{$score}</font></b></i>$lang['feng'] &nbsp;
+                $lang['dtqk'] {$donenum} $lang['ti'],$lang['dadui']  {echo $truenum} $lang['ti'],$lang['dacuo'] {echo $donenum-$truenum} $lang['ti']</div>
+              </div>
+            </div>
+	        </div></td>
+		   <td valign="top"><div class="exam_main_r_error"></div></td>
+      </tr>
+	  </table>
+	  
+	  <table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+	    <tr>
+	       <td valign="top" class="exam_main_l2"><div  class="exam_main_l2"></div></td>
+	      <td width="100%" valign="top">
+		    <div class="exam_main_c2 f12c">
+			<!-- 考试结果展示开始 -->
+			 <div class="exam_error_chose">
+			    <table width="593" class="f12c" align="center" border="0" cellpadding="0" cellspacing="0">
+			      <tr>
+			        <td width="30" height="30"><input name="glquestion" type="radio" value="-1" onclick="glerror(this.value);"/></td>
+						<td width="134">$lang['zkct']</td>
+					<td width="30"><input name="glquestion" type="radio" value="1" checked="checked" onclick="glerror(this.value);"/></td>
+						<td width="396">$lang['qbst']</td>
+			    </tr></table>
+			  </div>
+			  
+			  	{loop $questionArray $key $qArray}
+			 	 {if ($key%2==0)}<div class="exam_list01"> {/if}
+			 	 {if ($key%2==1)}<div class="exam_list02">{/if}
+			    {if $qArray['istrue']==1}<div id="duiti" name="duiti" class="exam_listin">{/if}
+			    {if $qArray['istrue']==-1}<div id="cuoti" name="cuoti" class="exam_listin">{/if}
+			    {if $qArray['istrue']==0}<div id="meizuo" name="meizuo" class="exam_listin">{/if}
+			    <font id="t_{echo $key+1}"><b>{echo $key+1}</b>. $qArray['title'] ($qArray['id'])</font><font class="exam_list_mark"><img  src="./source/plugin/xngs_jkt/template/img/exam_mark01.jpg" /></font><br/>
+			       {if $qArray['content']!="null"}
+			   		  <div class="exam_img"><img src="./source/plugin/xngs_jkt/template/{$qArray['content']}" /></div> 
+			       {/if}
+			      <!-- 开始 循环选项 -->
+			     {loop $qArray["items"] $k  $item}
+				         &nbsp;
+				        {if ($qArray["typeid"]==1||$qArray["typeid"]==2) }
+				             {if $item['id']== $qArray['myanswer']}
+				               <input checked="checked"    id="$qArray['id']" name="$qArray['id']" type="radio" value="$item['id']" ></input>
+				             {else}
+				                <input    id="$qArray['id']" name="$qArray['id']" type="radio" value="$item['id']" ></input>
+				             {/if}
+				         {elseif ($qArray["typeid"]==3)}
+				            {if strpos($qArray['myanswer'],$item['id'])>0 }
+				             <input checked="checked"    id="$qArray['id']" name="$qArray['id']" type="checkbox" value="$item['id']" ></input>
+				            {else}
+				              <input    id="$qArray['id']" name="$qArray['id']" type="checkbox" value="$item['id']" ></input>
+				            {/if}
+			            {/if}
+				        {if $qArray["typeid"]==1}
+				         {if $k==0}<span id="i_$item['id']">A</span>: {/if}
+				         {if $k==1}<span id="i_$item['id']">B</span>: {/if}
+				         {if $k==2}<span id="i_$item['id']">C</span>: {/if}
+				         {if $k==3}<span id="i_$item['id']">D</span>: {/if}
+				       {/if}
+				       $item['content']
+				       </input>
+				      {if ($qArray["typeid"]==1||$qArray["typeid"]==3)&&($k+1!=count($qArray["items"]))}<br/>{/if}
+			   {/loop}	 
+			     <!-- 结束 循环选项 -->  	
+			    {if $qArray["istrue"]==-1&&$qArray["done"]==1}<p> <div class="error"></div><div class="error_ts"><span class="fgree">$lang['zqda']<b>$qArray["tip1"]</b> </span>  &nbsp; &nbsp; &nbsp;
+			     <span class="f12r">$lang['ndxz']<b>$qArray["tip2"]</b></span></div></p>{/if}
+			    {if $qArray["istrue"]==1}<p class="yes f12"></p>{/if}
+			     {if $qArray["done"]==0}<div><b>$lang['weida']</b></div>{/if}
+			    </div>
+			  </div>
+             {/loop}
+			<!-- 考试结果展示结束 -->
+			  <div class="exam_list_foot">	
+				  <div class="exam_bt03"><a href="javascript:personcenter('historyexam');"></a></div>
+				  <div class="exam_bt_home"><a href="/plugin.php?id=xngs_jkt:index"></a></div>
+		      </div>
+			  
+			  
+		  
+	        </div> 
+		  </td>
+		   <td valign="top" class="exam_main_r2"><div class="exam_main_r2"></div></td>
+      </tr>
+	  </table>
+	   <form id="form1" name="form1" method="post" action="">
+	   <input type="hidden" name="formhash" value="<!--{eval echo formhash();}-->" /> 
+	    <input name="flag" type="hidden" id="flag" value="">
+	    <input name="schoolid" type="hidden" id="schoolid" value="{$schoolid}">
+	 </form>
+	   <form id="form3" name="form3" method="post" action="">
+	    <input type="hidden" name="formhash" value="<!--{eval echo formhash();}-->" /> 
+	    <input name="onelevel" type="hidden" id="onelevel" value="">
+	    <input name="kc" type="hidden" id="kc" value="">
+	 </form>   
+  </div>
+ <script type="text/JavaScript">
+ 	 function personcenter(str){
+	 		 document.getElementById("flag").value=str;
+	 		 form1.submit();
+	 }
+ 	 function glerror(str){
+ 		   var ditems=document.getElementsByName("duiti");
+			for (var j=0;j<ditems.length;j++){
+				 if(str=="-1"){
+					ditems[j].style.display="none";
+				 }else{
+					 ditems[j].style.display="block";
+				 }
+			}
+			 var mitems=document.getElementsByName("meizuo");
+				for (var j=0;j<mitems.length;j++){
+					 if(str=="-1"){
+						mitems[j].style.display="none";
+					 }else{
+						 mitems[j].style.display="block";
+					 }
+				}
+ 	}
+ 	function selkc(onelevel,kc){
+		document.getElementById("onelevel").value=onelevel;
+		document.getElementById("kc").value=kc;
+		form3.submit();
+	}
+   	</script>
+	
+     <div class="foot">
+   {template xngs_jkt:foot_exam}
+     </div>
+	   
+	   
+</div>
+<!--  左边结束 -->
+
+<!--右边开始 -->
+<div class="exam_right_nav">
+
+<div class="exam_right">
+    <div class="exam_right_tit f16cb">$lang['km1name'] &nbsp; $lang['llks']</div>
+   <div class="exam_rightbt01"><a href="javascript:selkc(1,1);"></a></div>
+   <div class="exam_rightbt02"><a href="javascript:selkc(1,2);"></a></div>
+   <div class="exam_rightbt03"><a href="javascript:selkc(1,3);"></a></div> 
+  </div>
+  <div class="exam_right_ad">
+      <a href="$examadvlink_arr[0]"><img src="$examadvurl_arr[0]" /></a><br>
+      <a href="$examadvlink_arr[1]"><img src="$examadvurl_arr[1]" /></a>
+  </div> 
+  
+  
+   
+<div class="exam_right">
+  <div class="exam_right_tit f16cb">$lang['km4name'] &nbsp; $lang['llks']</div>
+    <div class="exam_rightbt01"><a href="javascript:selkc(4,1);"></a></div>
+   <div class="exam_rightbt02"><a href="javascript:selkc(4,2);"></a></div>
+   <div class="exam_rightbt03"><a href="javascript:selkc(4,3);"></a></div> 
+  </div> 
+   
+  <div class="exam_right_ad">
+      <a href="$examadvlink_arr[2]"><img src="$examadvurl_arr[2]" /></a><br>
+    <a href="$examadvlink_arr[3]"> <img src="$examadvurl_arr[3]" /></a>
+  </div> 
+  
+  
+  </div>
+ <!-- 右边结束 -->
+   
+   </div>
+
+<noscript><iframe src=*.html></iframe></noscript>
+</body>
+    <!--{template common/footer}-->

@@ -1,6 +1,6 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); 
 0
-|| checktplrefresh('./template/default/forum/post_poll.htm', './template/default/common/upload.htm', 1506400771, '3', './data/template/3_3_forum_post_poll.tpl.php', './template/PHPChina', 'forum/post_poll')
+|| checktplrefresh('./template/default/forum/post_poll.htm', './template/default/common/upload.htm', 1508742260, '3', './data/template/3_3_forum_post_poll.tpl.php', './template/PHPChina', 'forum/post_poll')
 ;?>
 <input type="hidden" name="polls" value="yes" />
 <div class="exfm cl">

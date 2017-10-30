@@ -1,8 +1,8 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); 
 0
-|| checktplrefresh('./template/default/common/header.htm', './template/default/common/header_common.htm', 1506397447, '3', './data/template/3_3_common_header_forum_index.tpl.php', './template/PHPChina', 'common/header_forum_index')
-|| checktplrefresh('./template/default/common/header.htm', './template/default/common/header_qmenu.htm', 1506397447, '3', './data/template/3_3_common_header_forum_index.tpl.php', './template/PHPChina', 'common/header_forum_index')
-|| checktplrefresh('./template/default/common/header.htm', './template/default/common/pubsearchform.htm', 1506397447, '3', './data/template/3_3_common_header_forum_index.tpl.php', './template/PHPChina', 'common/header_forum_index')
+|| checktplrefresh('./template/default/common/header.htm', './template/default/common/header_common.htm', 1508740165, '3', './data/template/3_3_common_header_forum_index.tpl.php', './template/PHPChina', 'common/header_forum_index')
+|| checktplrefresh('./template/default/common/header.htm', './template/default/common/header_qmenu.htm', 1508740165, '3', './data/template/3_3_common_header_forum_index.tpl.php', './template/PHPChina', 'common/header_forum_index')
+|| checktplrefresh('./template/default/common/header.htm', './template/default/common/pubsearchform.htm', 1508740165, '3', './data/template/3_3_common_header_forum_index.tpl.php', './template/PHPChina', 'common/header_forum_index')
 ;?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
